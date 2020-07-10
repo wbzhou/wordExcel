@@ -1,4 +1,4 @@
-package tmp.exportzip.src.main.java.com.chenmt.exportzip.utils;
+package com.chenmt.exportzip.utils;
 
 import com.alibaba.fastjson.JSONObject;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -205,7 +205,13 @@ public class ExcelUtil {
 			return String.valueOf(cell.getNumericCellValue());
 		} else {
 			// 返回字符串类型的值
-			return String.valueOf(cell.getStringCellValue());
+			try {
+
+				return String.valueOf(cell.getStringCellValue());
+			} catch (Exception e) {
+				e.printStackTrace();
+				return "";
+			}
 		}
 	}
 }

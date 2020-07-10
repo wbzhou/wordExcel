@@ -1,4 +1,4 @@
-package tmp.exportzip.src.main.java.com.chenmt.exportzip.utils;
+package com.chenmt.exportzip.utils;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;

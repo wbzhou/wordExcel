@@ -1,4 +1,4 @@
-package tmp.exportzip.src.main.java.com.chenmt.exportzip.controller;
+package com.chenmt.exportzip.controller;
 
 import com.chenmt.exportzip.utils.FileUtils;
 import com.chenmt.exportzip.utils.WordUtils;

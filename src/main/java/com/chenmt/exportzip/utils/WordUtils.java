@@ -1,4 +1,4 @@
-package tmp.exportzip.src.main.java.com.chenmt.exportzip.utils;
+package com.chenmt.exportzip.utils;
 
 import cn.afterturn.easypoi.word.WordExportUtil;
 import org.apache.commons.lang3.time.DateFormatUtils;
@@ -28,7 +28,8 @@ public class WordUtils {
         String templPath= "templates/tmp.docx";
         try {
             XWPFDocument doc = WordExportUtil.exportWord07(templPath, param);
-            FileOutputStream fos = new FileOutputStream(wordPath +param.get("name")+dateTime+".docx");
+            FileOutputStream fos = new FileOutputStream(wordPath +param.get("outDate")+".docx");
+//            FileOutputStream fos = new FileOutputStream(wordPath +param.get("checkDate")+dateTime+".docx");
             doc.write(fos);
             fos.close();
         } catch (Exception e) {
